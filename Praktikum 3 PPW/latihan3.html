@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menyisipkan Asset Web dan Embed Script</title>
+</head>
+
+<body>
+    <p>
+        <b>Nama:</b> Cahyo <br>
+        <b>NIM:</b> 25.12.3680
+    </p>
+    <hr>
+
+    <h2>Latihan Menampilkan Image</h2>
+
+    <h3>1. Contoh menampilkan image yang diambil dari local server</h3>
+    <p>
+        <img src="logo.png" alt="logo HTML" width="20%" height="20%">
+        <br>
+    </p>
+
+    <h3>2. Contoh menampilkan Image yang tersimpan pada folder yang berbeda</h3>
+    <p>
+        <img src="picture/cat.jpg" alt="cat picture" width="30%" height="30%">
+        <br>
+    </p>
+
+    <h3>3. Contoh menampilkan image yang diambil dari web lain</h3>
+    <p>
+        <img src="https://images.seeklogo.com/logo-png/34/1/amikom-university-logo-png_seeklogo-348202.png"
+            alt="logo Amikom" border="1" width="300" height="300">
+        <br>
+    </p>
+
+    <h3>4. Membuat gambar menjadi link:</h3>
+    <p>
+        Klik gambar ini
+        <a href="https://www.w3schools.com/html/html_images.asp" target="_blank">
+            <img src="logo.png" alt="logo" style="width: 42px; height: 42px">
+        </a>
+    </p>
+    <hr>
+
+    <h2>Latihan Menampilkan Video, Audio, dan Embedded Script</h2>
+
+    <h3>1. Contoh Menampilkan Video</h3>
+    <p>
+        Ini adalah video yang disimpan dalam local server<br>
+        <video width="30%" height="30%" controls>
+            <source src="asset/video/amikom.mp4" type="video/mp4">
+            <source src="asset/video/amikom.ogg" type="video/ogg">
+            Your browser does not support the video tag.
+        </video>
+    </p>
+
+    <p>
+        Ini adalah video yang diambil dari embedded script Youtube<br>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/R6NqHIZuVgA?si=t2yZEzF6hj7aljxv"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+        </iframe>
+    </p>
+
+    <h3>2. Contoh Menampilkan Audio</h3>
+    <p>
+        Ini adalah audio disimpan dalam local server<br>
+        <audio controls>
+            <source src="asset/audio/indonesiaraya.mp3" type="audio/mp3">
+        </audio>
+    </p>
+
+    <h3>3. Contoh Menampilkan Embedded Script dari Media Sosial</h3>
+    <p>
+        Ini adalah hasil embed postingan dari media sosial Instagram<br>
+    <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/cahyo_sirat05/"
+        data-instgrm-version="14"
+        style="max-width:540px; margin: 1px; padding:0; width:99.375%; border: 1px solid #dbdbdb; border-radius: 4px;">
+        <div style="padding:16px;">
+            <a href="https://www.instagram.com/cahyo_sirat05/" target="_blank"
+                style="text-decoration:none; color:#000;">
+                <strong>@cahyo_sirat05 di Instagram</strong>
+            </a>
+        </div>
+    </blockquote>
+    <script async src="https://www.instagram.com/embed.js"></script>
+    </p>
+</body>
+
+</html>

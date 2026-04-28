@@ -1,0 +1,698 @@
+/* ============================================================
+   CAHYO PORTFOLIO — style.css (Layout 3 Kolom)
+   Nama  : Cahyo
+   NIM   : 25.12.3680
+   Prodi : Sistem Informasi, AMIKOM Yogyakarta
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+/* ── VARIABEL WARNA & UKURAN ─────────────────────────────── */
+:root {
+    --putih: #ffffff;
+    --abu-x-terang: #fafafa;
+    --abu-terang: #f3f4f6;
+    --abu-medium: #e5e7eb;
+    --hitam: #111827;
+    --teks: #111827;
+    --teks-muted: #4b5563;
+    --indigo: #6366f1;
+    --indigo-muda: #eef2ff;
+    --indigo-gelap: #4338ca;
+    --aksen: var(--indigo);
+    --aksen-muda: var(--indigo-muda);
+    --border: #e5e7eb;
+    --radius-lg: 20px;
+    --radius-md: 14px;
+    --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.03);
+    --shadow-md: 0 8px 24px -6px rgba(0, 0, 0, 0.06);
+}
+
+/* ── RESET DASAR ─────────────────────────────────────────── */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    color: var(--teks);
+    background-color: var(--abu-x-terang);
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: 'Outfit', sans-serif;
+    line-height: 1.25;
+    color: var(--teks);
+}
+
+p {
+    color: var(--teks-muted);
+}
+
+strong {
+    color: var(--teks);
+    font-weight: 600;
+}
+
+/* ── NAVBAR ATAS (HORIZONTAL) ────────────────────────────── */
+.topbar {
+    background: var(--putih);
+    border-bottom: 1px solid var(--border);
+    padding: 0.85rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: var(--shadow-sm);
+}
+
+.topbar__container {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+}
+
+.topbar__left {
+    display: flex;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.topbar__link {
+    color: var(--teks-muted);
+    font-size: 0.9rem;
+    font-weight: 600;
+    padding: 0.55rem 1.1rem;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+}
+
+.topbar__link:hover {
+    background: var(--abu-terang);
+    color: var(--indigo);
+}
+
+.topbar__cta {
+    background: var(--indigo);
+    color: var(--putih) !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 100px;
+}
+
+.topbar__cta:hover {
+    background: var(--indigo-gelap);
+    color: var(--putih) !important;
+    transform: translateY(-1px);
+}
+
+/* ── LAYOUT UTAMA: 3 KOLOM ───────────────────────────────── */
+.layout-grid {
+    max-width: 1600px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 280px 1fr 320px;
+    gap: 1.25rem;
+    padding: 1.25rem;
+    align-items: start;
+}
+
+.sidebar {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    position: sticky;
+    top: 80px;
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+    min-width: 0;
+    /* untuk mencegah overflow pada grid item */
+}
+
+/* ── PANEL (KARTU DASAR) ─────────────────────────────────── */
+.panel {
+    background: var(--putih);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.5rem;
+    box-shadow: var(--shadow-sm);
+}
+
+.panel__title {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: var(--indigo);
+    margin-bottom: 1rem;
+    padding-bottom: 0.85rem;
+    border-bottom: 1px solid var(--border);
+}
+
+.panel__title--large {
+    font-size: 1.4rem;
+    color: var(--indigo);
+}
+
+.panel__subtitle {
+    font-size: 0.88rem;
+    font-style: italic;
+    color: var(--teks-muted);
+    margin-top: -0.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.panel__meta {
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--teks-muted);
+    font-style: italic;
+}
+
+/* ── SIDEBAR: LINK LIST ──────────────────────────────────── */
+.link-list li {
+    border-bottom: 1px solid var(--border);
+}
+
+.link-list li:last-child {
+    border-bottom: none;
+}
+
+.link-list li a {
+    display: block;
+    padding: 0.75rem 0.25rem;
+    font-size: 0.92rem;
+    color: var(--teks-muted);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.link-list li a:hover {
+    color: var(--indigo);
+    padding-left: 0.5rem;
+}
+
+/* ── SIDEBAR: EXPERTISE / LIST ───────────────────────────── */
+.expertise-list li {
+    padding: 0.7rem 0.9rem;
+    margin-bottom: 0.5rem;
+    background: var(--abu-x-terang);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 0.88rem;
+    color: var(--teks);
+    font-weight: 500;
+    transition: all 0.2s ease;
+}
+
+.expertise-list li:hover {
+    background: var(--indigo-muda);
+    border-color: var(--indigo);
+    color: var(--indigo-gelap);
+    transform: translateX(3px);
+}
+
+.expertise-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* ── KONTEN TENGAH: ABOUT ────────────────────────────────── */
+.about-row {
+    display: grid;
+    grid-template-columns: 220px 1fr;
+    gap: 1.5rem;
+    align-items: start;
+    margin-bottom: 1.25rem;
+}
+
+.profile-image {
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(135deg, var(--indigo-muda), #ddd6fe);
+    border: 1px solid var(--indigo-muda);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--indigo-gelap);
+    font-weight: 600;
+    font-size: 0.92rem;
+}
+
+.about-text p {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 0.85rem;
+    color: var(--teks-muted);
+}
+
+.about-text p:last-child {
+    margin-bottom: 0;
+}
+
+.about-tagline {
+    background: var(--indigo-muda);
+    border: 1px solid rgba(99, 102, 241, 0.2);
+    border-radius: var(--radius-md);
+    padding: 1rem 1.25rem;
+    font-size: 0.88rem;
+    color: var(--indigo-gelap);
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+/* ── WORK EXPERIENCE ────────────────────────────────────── */
+.exp-group {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px dashed var(--border);
+}
+
+.exp-group:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.exp-group__name {
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--teks);
+    margin-bottom: 0.75rem;
+}
+
+.exp-group__dur {
+    font-size: 0.82rem;
+    font-weight: 500;
+    color: var(--teks-muted);
+    font-style: italic;
+}
+
+.exp-item {
+    padding-left: 1rem;
+    border-left: 3px solid var(--indigo);
+    margin-top: 0.5rem;
+}
+
+.exp-item__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.exp-item__head strong {
+    font-size: 0.95rem;
+    color: var(--teks);
+}
+
+.exp-item__date {
+    font-size: 0.8rem;
+    color: var(--teks-muted);
+    font-style: italic;
+}
+
+.exp-item__role {
+    font-size: 0.85rem;
+    color: var(--indigo);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.exp-item ul {
+    list-style: disc;
+    padding-left: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.exp-item ul li {
+    font-size: 0.87rem;
+    color: var(--teks-muted);
+    margin-bottom: 0.3rem;
+    line-height: 1.6;
+}
+
+/* ── PROJECTS GRID ──────────────────────────────────────── */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.project-card {
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    background: var(--putih);
+    transition: all 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--indigo);
+}
+
+.project-card__img {
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    background: var(--abu-terang);
+}
+
+.project-card__img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s;
+}
+
+.project-card:hover .project-card__img img {
+    transform: scale(1.05);
+}
+
+.project-card__body {
+    padding: 1rem 1.1rem 1.2rem;
+}
+
+.project-card__cat {
+    font-size: 0.68rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--indigo);
+    letter-spacing: 0.1em;
+}
+
+.project-card__body h3 {
+    font-size: 1rem;
+    color: var(--teks);
+    margin: 0.35rem 0 0.4rem;
+}
+
+.project-card__body p {
+    font-size: 0.82rem;
+    color: var(--teks-muted);
+    line-height: 1.55;
+}
+
+/* ── SIDEBAR KANAN: ABOUT ME ────────────────────────────── */
+.about-me-image {
+    aspect-ratio: 1 / 1;
+    background: linear-gradient(135deg, var(--indigo-muda), #ddd6fe);
+    border: 1px solid var(--indigo-muda);
+    border-radius: var(--radius-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--indigo-gelap);
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+}
+
+.about-me-text {
+    font-size: 0.88rem;
+    color: var(--teks-muted);
+    line-height: 1.6;
+}
+
+/* ── SIDEBAR KANAN: EDUCATION ───────────────────────────── */
+.edu-item {
+    padding: 0.85rem;
+    background: var(--abu-x-terang);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    margin-bottom: 0.75rem;
+}
+
+.edu-item:last-child {
+    margin-bottom: 0;
+}
+
+.edu-item strong {
+    font-size: 0.92rem;
+    color: var(--teks);
+    display: block;
+    margin-bottom: 0.25rem;
+}
+
+.edu-item p {
+    font-size: 0.82rem;
+    color: var(--teks-muted);
+    margin-bottom: 0.4rem;
+}
+
+.edu-item__date {
+    font-size: 0.78rem;
+    color: var(--indigo);
+    font-weight: 600;
+    font-style: italic;
+}
+
+/* ── CONTACT FORM ───────────────────────────────────────── */
+.contact-form {
+    margin-top: 0.5rem;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    margin-bottom: 1rem;
+}
+
+.form-group label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--teks);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    padding: 0.7rem 0.95rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    color: var(--teks);
+    background: var(--abu-x-terang);
+    transition: all 0.2s;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--indigo);
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.1);
+    background: var(--putih);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.radio-group,
+.check-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    padding: 0.4rem 0;
+}
+
+.radio-group label,
+.check-group label {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.85rem;
+    color: var(--teks-muted);
+    cursor: pointer;
+    font-weight: 400;
+}
+
+.form-actions {
+    display: flex;
+    gap: 0.75rem;
+    margin-top: 1rem;
+}
+
+.btn {
+    padding: 0.75rem 1.75rem;
+    border-radius: 100px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    transition: all 0.2s;
+}
+
+.btn-primary {
+    background-color: var(--indigo);
+    color: var(--putih);
+}
+
+.btn-primary:hover {
+    background-color: var(--indigo-gelap);
+    transform: translateY(-1px);
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border: 1px solid var(--border);
+    color: var(--teks);
+}
+
+.btn-secondary:hover {
+    background-color: var(--abu-terang);
+}
+
+/* ── BOX MODEL DEMO ─────────────────────────────────────── */
+.boxmodel-card {
+    border: 2px dashed var(--indigo) !important;
+    text-align: center;
+    background: var(--indigo-muda) !important;
+}
+
+.boxmodel-card p {
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    color: var(--teks);
+}
+
+/* ── FOOTER ─────────────────────────────────────────────── */
+.footer {
+    background: var(--putih);
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 2rem;
+    margin-top: 1rem;
+}
+
+.footer .container {
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 0.82rem;
+    color: var(--teks-muted);
+}
+
+.footer-copy a {
+    color: var(--indigo);
+    font-weight: 600;
+}
+
+.footer-copy a:hover {
+    color: var(--indigo-gelap);
+}
+
+/* ── RESPONSIF ──────────────────────────────────────────── */
+@media (max-width: 1200px) {
+    .layout-grid {
+        grid-template-columns: 250px 1fr 280px;
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .layout-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .sidebar {
+        position: static;
+    }
+
+    .sidebar--left,
+    .sidebar--right {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .topbar {
+        padding: 0.75rem 1rem;
+    }
+
+    .topbar__link {
+        font-size: 0.82rem;
+        padding: 0.45rem 0.7rem;
+    }
+
+    .layout-grid {
+        padding: 1rem;
+    }
+
+    .sidebar--left,
+    .sidebar--right {
+        grid-template-columns: 1fr;
+    }
+
+    .about-row {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        max-width: 220px;
+        margin: 0 auto;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .exp-item__head {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}

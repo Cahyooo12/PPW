@@ -1,0 +1,185 @@
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:Arial,sans-serif;font-size:15px;background:#f1f1f1;color:#222;line-height:1.6;}
+header{background:#1a1a2e;color:#fff;padding:24px;text-align:center;}
+header h1{font-size:28px;color:#e2b96f;font-weight:500;}
+header p{font-size:13px;color:#aaa;margin-top:4px;}
+nav{background:#16213e;overflow:hidden;}
+nav a{float:left;display:block;color:#eee;padding:12px 18px;text-decoration:none;font-size:14px;}
+nav a:hover{background:#0f3460;color:#e2b96f;}
+nav a.right{float:right;}
+.wrapper{display:flex;gap:0;min-height:400px;}
+aside.left{width:22%;background:#fff;border-right:1px solid #ddd;padding:16px;}
+aside.left h2{font-size:15px;font-weight:500;color:#1a1a2e;margin-bottom:10px;}
+aside.left ul{list-style:none;}
+aside.left ul li a{display:block;color:#333;text-decoration:none;padding:6px 8px;border-radius:4px;font-size:13px;}
+aside.left ul li a:hover{background:#e2b96f22;color:#1a1a2e;}
+main{flex:1;padding:16px;}
+article{background:#fff;padding:20px;border-radius:6px;margin-bottom:16px;}
+article h2{font-size:17px;color:#1a1a2e;font-weight:500;margin-bottom:6px;}
+article h5{font-size:12px;color:#888;margin-bottom:10px;}
+.fakeimg{background:#bbb;width:100%;padding:20px;text-align:center;color:#fff;border-radius:4px;font-size:13px;margin-bottom:10px;}
+.gallery-row{display:flex;gap:10px;margin-top:10px;}
+.gallery-item{flex:1;border:1px solid #ccc;border-radius:4px;overflow:hidden;text-align:center;}
+.gallery-item .gimg{background:#aaa;height:90px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:12px;}
+.gallery-item .desc{padding:6px;font-size:11px;color:#555;}
+aside.right{width:24%;background:#f9f9f9;border-left:1px solid #ddd;padding:16px;}
+aside.right h2{font-size:15px;font-weight:500;color:#1a1a2e;margin-bottom:8px;}
+aside.right .fakeimg{height:80px;font-size:12px;}
+aside.right p{font-size:13px;color:#444;margin-top:8px;}
+.kotak{width:100%;padding:10px;border:4px dashed purple;border-radius:0;margin:12px 0;font-size:13px;color:#555;text-align:center;background:#fff;}
+
+/* FORM */
+.form-section{background:#fff;padding:20px;border-radius:6px;margin-top:0;}
+.form-section h3{font-size:16px;color:#1a1a2e;font-weight:500;margin-bottom:14px;border-bottom:2px solid #e2b96f;padding-bottom:6px;}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px 16px;}
+.form-group{display:flex;flex-direction:column;gap:4px;}
+.form-group.full{grid-column:1/-1;}
+label{font-size:12px;color:#555;font-weight:500;}
+input[type=text],input[type=email],input[type=file],input[type=datetime-local],select,textarea{width:100%;padding:7px 10px;border:1px solid #ccc;border-radius:4px;font-size:13px;font-family:Arial,sans-serif;background:#fff;color:#222;}
+textarea{resize:vertical;min-height:70px;}
+.radio-group, .check-group{display:flex;gap:14px;flex-wrap:wrap;font-size:13px;align-items:center;padding:4px 0;}
+.radio-group label, .check-group label{display:flex;align-items:center;gap:5px;font-weight:400;color:#333;}
+.btn-row{display:flex;gap:10px;justify-content:flex-end;margin-top:14px;}
+.btn-submit{background:#1a1a2e;color:#e2b96f;border:none;padding:9px 22px;border-radius:4px;font-size:13px;cursor:pointer;}
+.btn-reset{background:#eee;color:#333;border:1px solid #ccc;padding:9px 22px;border-radius:4px;font-size:13px;cursor:pointer;}
+footer{background:#16213e;color:#aaa;text-align:center;padding:16px;font-size:13px;margin-top:0;}
+.nim-nama{font-size:11px;color:#e2b96f;margin-top:4px;}
+@media(max-width:700px){.wrapper{flex-direction:column;}aside.left,aside.right,main{width:100%;}nav a{float:none;width:100%;}}.form-grid{grid-template-columns:1fr;}
+</style>
+
+<header>
+  <h1>Reza Firmansyah — Portofolio</h1>
+  <p>Mahasiswa S1 Sistem Informasi · Universitas AMIKOM Yogyakarta</p>
+</header>
+
+<nav>
+  <a href="#">Beranda</a>
+  <a href="#">Portofolio</a>
+  <a href="#">Blog</a>
+  <a href="#">Kontak</a>
+  <a href="#" class="right">Login</a>
+</nav>
+
+<div class="wrapper">
+  <aside class="left">
+    <h2>Navigasi</h2>
+    <ul>
+      <li><a href="#">Tentang Saya</a></li>
+      <li><a href="#">Pendidikan</a></li>
+      <li><a href="#">Keahlian</a></li>
+      <li><a href="#">Proyek</a></li>
+      <li><a href="#">Sertifikat</a></li>
+    </ul>
+    <br>
+    <h2>Keahlian</h2>
+    <ul>
+      <li><a href="#">HTML & CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+      <li><a href="#">PHP & MySQL</a></li>
+      <li><a href="#">Figma / UI Design</a></li>
+    </ul>
+  </aside>
+
+  <main>
+    <article>
+      <h2>Selamat Datang di Portofolio Saya</h2>
+      <h5>Diperbarui: 17 April 2026</h5>
+      <div class="fakeimg">[ Foto Profil ]</div>
+      <p>Halo! Saya Reza Firmansyah, mahasiswa Sistem Informasi yang antusias di bidang pengembangan web dan desain antarmuka. Saya memiliki pengalaman dalam membangun aplikasi web menggunakan HTML, CSS, JavaScript, dan PHP.</p>
+      <br>
+      <p>Beberapa proyek yang pernah saya kerjakan meliputi sistem manajemen perpustakaan, aplikasi absensi berbasis web, dan website profil universitas.</p>
+
+      <div class="gallery-row">
+        <div class="gallery-item">
+          <div class="gimg">Proyek 1</div>
+          <div class="desc">Sistem Perpustakaan</div>
+        </div>
+        <div class="gallery-item">
+          <div class="gimg">Proyek 2</div>
+          <div class="desc">Aplikasi Absensi</div>
+        </div>
+        <div class="gallery-item">
+          <div class="gimg">Proyek 3</div>
+          <div class="desc">Web Profil Kampus</div>
+        </div>
+      </div>
+    </article>
+
+    <section class="form-section">
+      <h3>Formulir Lamaran Magang / Kolaborasi</h3>
+      <div class="form-grid">
+        <div class="form-group">
+          <label>Nama Lengkap</label>
+          <input type="text" placeholder="Masukkan nama lengkap">
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" placeholder="contoh@email.com">
+        </div>
+        <div class="form-group">
+          <label>Posisi yang Diminati</label>
+          <select>
+            <option value="">-- Pilih Posisi --</option>
+            <option>Frontend Developer</option>
+            <option>UI/UX Designer</option>
+            <option>Backend Developer</option>
+            <option>Data Analyst</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Tanggal Mulai</label>
+          <input type="datetime-local">
+        </div>
+        <div class="form-group full">
+          <label>Jenis Kelamin</label>
+          <div class="radio-group">
+            <label><input type="radio" name="gender" value="laki"> Laki-laki</label>
+            <label><input type="radio" name="gender" value="perempuan"> Perempuan</label>
+          </div>
+        </div>
+        <div class="form-group full">
+          <label>Keahlian yang Dimiliki</label>
+          <div class="check-group">
+            <label><input type="checkbox"> HTML/CSS</label>
+            <label><input type="checkbox"> JavaScript</label>
+            <label><input type="checkbox"> PHP</label>
+            <label><input type="checkbox"> Python</label>
+            <label><input type="checkbox"> Figma</label>
+          </div>
+        </div>
+        <div class="form-group full">
+          <label>Motivasi / Pesan</label>
+          <textarea placeholder="Ceritakan mengapa Anda tertarik berkolaborasi..."></textarea>
+        </div>
+        <div class="form-group full">
+          <label>Upload CV / Portofolio</label>
+          <input type="file" accept=".pdf,.doc,.docx">
+        </div>
+      </div>
+      <div class="btn-row">
+        <button class="btn-reset" type="reset">Reset</button>
+        <button class="btn-submit" type="submit">Submit</button>
+      </div>
+    </section>
+
+    <div class="kotak">Box Model — elemen ini menggunakan border dashed purple, padding, dan margin. Nama: Reza Firmansyah · NIM: 12345678</div>
+  </main>
+
+  <aside class="right">
+    <h2>Tentang Saya</h2>
+    <div class="fakeimg">[ Foto ]</div>
+    <p>Reza Firmansyah · Yogyakarta · Semester 4 · Sistem Informasi AMIKOM</p>
+    <br>
+    <h2>Kontak</h2>
+    <p>📧 reza@email.com</p>
+    <p>📱 +62 812-xxxx-xxxx</p>
+    <p>🔗 linkedin.com/in/reza</p>
+  </aside>
+</div>
+
+<footer>
+  <p>&copy; 2026 Reza Firmansyah. Hak Cipta Dilindungi.</p>
+  <p class="nim-nama">Nama: Reza Firmansyah · NIM: 12345678 · Praktikum PPW — Pertemuan 5</p>
+</footer>
