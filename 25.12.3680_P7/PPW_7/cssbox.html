@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model - Praktikum 7</title>
+    <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="stylebox.css">
+</head>
+<body>
+
+    <div class="page-header">
+        <h1>Praktikum 7 &mdash; CSS3 : Box Model &amp; Typography</h1>
+        <p class="subtitle">Program Studi S1 Sistem Informasi &mdash; Universitas AMIKOM Yogyakarta</p>
+    </div>
+
+    <div class="box">
+        <h2>Contoh CSS Box Model</h2>
+
+        <p>
+            Ini adalah contoh implementasi CSS Box Model yang terdiri dari margin, border, padding,
+            dan content. Paragraf ini juga menggunakan tipografi dari Google Fonts, dengan pengaturan
+            line-height agar lebih mudah dibaca, serta text-align justify untuk tampilan teks yang
+            rapi di kedua sisi.
+        </p>
+
+        <div class="img-wrapper">
+            <img
+                src="https://media.neliti.com/media/organisations/logo-544-universitas-amikom-yogyakarta.png"
+                alt="Ilustrasi CSS Box Model"
+            >
+        </div>
+        <p class="img-caption">Ilustrasi: Diagram CSS Box Model (Margin &gt; Border &gt; Padding &gt; Content)</p>
+
+        <table>
+            <tr>
+                <th>Properti</th>
+                <th>Fungsi</th>
+            </tr>
+            <tr>
+                <td>Margin</td>
+                <td>Ruang di luar border (transparan)</td>
+            </tr>
+            <tr>
+                <td>Border</td>
+                <td>Garis batas yang mengelilingi padding dan konten</td>
+            </tr>
+            <tr>
+                <td>Padding</td>
+                <td>Ruang antara border dan konten (transparan)</td>
+            </tr>
+            <tr>
+                <td>Content</td>
+                <td>Area tempat teks dan gambar ditampilkan</td>
+            </tr>
+        </table>
+
+        <br>
+        <p>
+            Untuk informasi lebih lanjut tentang CSS, kunjungi
+            <a href="https://www.w3schools.com/css/" target="_blank">W3Schools CSS Tutorial</a>.
+        </p>
+    </div>
+
+    <div class="card-wrapper">
+        <div class="card">
+            <div class="card-icon">📦</div>
+            <h3>Box Model</h3>
+            <p>Setiap elemen HTML dibungkus oleh model kotak: margin, border, padding, dan content.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🔤</div>
+            <h3>Typography</h3>
+            <p>Font Merriweather dan Nunito dipilih dari Google Fonts untuk keterbacaan optimal.</p>
+        </div>
+        <div class="card">
+            <div class="card-icon">🎨</div>
+            <h3>CSS Float</h3>
+            <p>Properti float memposisikan elemen ke kiri atau kanan di dalam wadah (container).</p>
+        </div>
+    </div>
+
+    <div class="badge-nim">
+        <div>👤 Nama &nbsp;: <span>Cahyo</span></div>
+        <div>🎓 NIM &nbsp;&nbsp;: <span>25.12.3680</span></div>
+        <div>📁 Praktikum <span>7</span></div>
+    </div>
+
+</body>
+</html>

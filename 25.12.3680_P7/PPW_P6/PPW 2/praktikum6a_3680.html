@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Internal dan Inline CSS</title>
+    <style type="text/css">
+      html {
+        background-color: #f0f2f5;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      }
+      
+      body {
+        background-color: #ffffff;
+        color: #333333;
+        max-width: 650px;
+        margin: 50px auto;
+        padding: 40px;
+        border-radius: 12px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        line-height: 1.6;
+      }
+
+      h1 {
+        text-align: center;
+        color: #2c3e50;
+        font-size: 26px;
+        margin-top: 0;
+        margin-bottom: 15px;
+        border-bottom: 2px solid #f0f2f5;
+        padding-bottom: 15px;
+      }
+
+      .judul {
+        color: #27ae60;
+        font-size: 20px;
+        font-style: italic;
+        margin-bottom: 10px;
+        font-weight: 600;
+      }
+
+      p {
+        text-align: left;
+        font-size: 16px;
+        color: #555555;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Latihan Internal CSS</h1>
+    <h2 class="judul">Pengumuman</h2>
+    <p>
+      Bagian ini berisi contoh paragraf yang diformat dengan menggunakan metode
+      internal CSS. <br />
+      Perhatikan bahwa semua kode CSS untuk bagian ini ada di bagian head.
+    </p>
+    
+    <br />
+    
+    <h1 style="color: #2980b9; text-align: center; border-bottom: 2px solid #f0f2f5; padding-bottom: 15px; margin-top: 20px;">Latihan Inline CSS</h1>
+    <p style="color: #c0392b;">
+      Bagian ini berisi contoh paragraf yang diformat dengan menggunakan metode
+      inline CSS. <br />Deklarasi kode CSS ada di dalam atribut style dalam tag.
+    </p>
+  </body>
+</html>
